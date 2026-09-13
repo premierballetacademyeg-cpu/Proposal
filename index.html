@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Premier Ballet Academy — Service Agreement Template</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, Segoe UI, Helvetica, Arial, sans-serif;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 20px 80px;
+    color: #222;
+    line-height: 1.55;
+    font-size: 15px;
+    background: #f7f8fa;
+  }
+  #toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 14px 0;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  #toolbar .hint { font-size: 12.5px; color: #777; }
+  .toolbar-right { display: flex; align-items: center; gap: 14px; }
+  #langToggle {
+    display: flex;
+    border: 1px solid #1F3864;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  #langToggle button {
+    border: none;
+    background: #fff;
+    color: #1F3864;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  #langToggle button.active {
+    background: #1F3864;
+    color: #fff;
+  }
+  #downloadBtn {
+    background: #1F3864;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  #downloadBtn:hover { background: #16294d; }
+  #downloadBtn:disabled { opacity: 0.6; cursor: default; }
+  #paper {
+    background: #fff;
+    padding: 30px 40px 50px;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  }
+  h1 { text-align: center; color: #1F3864; margin-bottom: 4px; font-size: 22px; }
+  h2.subtitle { text-align: center; font-size: 15px; font-weight: 600; margin-top: 0; color: #444; }
+  p.note { text-align: center; font-style: italic; color: #777; font-size: 13px; margin-top: 0; margin-bottom: 30px; }
+  h3 { color: #1F3864; border-bottom: 2px solid #1F3864; padding-bottom: 4px; margin-top: 34px; font-size: 16px; }
+  .field { margin: 6px 0; }
+  .field b { font-weight: 600; }
+  ul { margin: 6px 0; padding-left: 22px; }
+  [dir="rtl"] ul { padding-left: 0; padding-right: 22px; }
+  li { margin-bottom: 4px; }
+  .placeholder {
+    background: #fff3b0;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-style: normal;
+    cursor: text;
+    border: 1px solid transparent;
+  }
+  .placeholder:focus { outline: none; border: 1px solid #1F3864; background: #fff9d6; }
+  .placeholder.filled { background: #eaf1e3; }
+  .callout { background: #f4f6fb; border-left: 4px solid #1F3864; padding: 10px 14px; margin: 12px 0; font-size: 14px; }
+  [dir="rtl"] .callout { border-left: none; border-right: 4px solid #1F3864; }
+  .sig-line { margin: 14px 0 6px; }
+  .sig-underline { display: inline-block; border-bottom: 1px solid #333; min-width: 260px; }
+  .appendix { margin-top: 60px; padding-top: 20px; border-top: 3px double #1F3864; }
+  .two-col { display: flex; gap: 40px; flex-wrap: wrap; }
+  .two-col > div { flex: 1; min-width: 260px; }
+  .lang-block { display: none; }
+  .lang-block.active { display: block; }
+  [dir="rtl"] { font-family: Tahoma, Arial, sans-serif; text-align: right; }
+  [dir="rtl"] .two-col { flex-direction: row-reverse; }
+</style>
+</head>
+<body>
+
+<div id="toolbar">
+  <span class="hint" id="hintText">Click any highlighted field to edit it, then download.</span>
+  <div class="toolbar-right">
+    <div id="langToggle">
+      <button id="btnEN" class="active" onclick="setLang('en')">EN</button>
+      <button id="btnAR" onclick="setLang('ar')">AR</button>
+    </div>
+    <button id="downloadBtn" onclick="downloadPdf()">⬇ Download PDF</button>
+  </div>
+</div>
+
+<div id="paper">
+
+  <!-- ================= ENGLISH ================= -->
+  <div id="content-en" class="lang-block active" dir="ltr">
+
+    <h1>PREMIER BALLET ACADEMY</h1>
+    <h2 class="subtitle">After-School Dance Program — Service Agreement</h2>
+    <p class="note">Fill in the highlighted fields for this client, then download</p>
+
+    <p>This Agreement is made and entered into this <span class="placeholder" contenteditable="true" data-default="[DAY]">[DAY]</span> day of <span class="placeholder" contenteditable="true" data-default="[MONTH]">[MONTH]</span>, <span class="placeholder" contenteditable="true" data-default="[YEAR]">[YEAR]</span> by and between <b>Premier Ballet Academy</b>, located at <span class="placeholder" contenteditable="true" data-default="[ACADEMY ADDRESS]">[ACADEMY ADDRESS]</span>, hereinafter referred to as the "Academy", and <span class="placeholder" contenteditable="true" data-default="[SCHOOL NAME]">[SCHOOL NAME]</span>, located at <span class="placeholder" contenteditable="true" data-default="[SCHOOL ADDRESS]">[SCHOOL ADDRESS]</span>, hereinafter referred to as the "School".</p>
+
+    <h3>1. Scope of Services</h3>
+    <div class="field"><b>Dance Styles Offered:</b> <span class="placeholder" contenteditable="true" data-default="[e.g. Ballet & Contemporary]">[e.g. Ballet & Contemporary]</span></div>
+    <div class="field"><b>Target Student Body:</b> <span class="placeholder" contenteditable="true" data-default="[e.g. KG1, KG2, Grade 1, Grade 2 — ages 5–7]">[e.g. KG1, KG2, Grade 1, Grade 2 — ages 5–7]</span></div>
+    <div class="field"><b>Program Goals:</b> To teach students foundational dance techniques, choreography, teamwork, and physical fitness in a safe and constructive environment.</div>
+
+    <h3>2. Schedule & Timeline</h3>
+    <div class="field"><b>Start Date:</b> <span class="placeholder" contenteditable="true" data-default="[START DATE]">[START DATE]</span></div>
+    <div class="field"><b>End Date:</b> <span class="placeholder" contenteditable="true" data-default="[END DATE]">[END DATE]</span></div>
+    <div class="field"><b>Weekly Schedule:</b> <span class="placeholder" contenteditable="true" data-default="[DAY(S) OF WEEK]">[DAY(S) OF WEEK]</span></div>
+    <div class="field"><b>Class Duration:</b> <span class="placeholder" contenteditable="true" data-default="[45 minutes / 1 hour]">[45 minutes / 1 hour]</span>, from <span class="placeholder" contenteditable="true" data-default="[START TIME]">[START TIME]</span> to <span class="placeholder" contenteditable="true" data-default="[END TIME]">[END TIME]</span></div>
+
+    <h3>3. Class Capacity & Group Management</h3>
+    <ul>
+      <li>Minimum enrollment per class: <b>8 students</b></li>
+      <li>Maximum enrollment per class: <b>12 students</b></li>
+      <li>If enrollment exceeds 12 students, the Academy will open an additional class, scheduled either (a) on a different day of the week, or (b) on the same day, immediately before or after the existing session.</li>
+    </ul>
+
+    <h3>4. Roles and Responsibilities</h3>
+    <p><b>The Academy agrees to:</b></p>
+    <ul>
+      <li>Provide appropriately qualified and vetted dance instructors.</li>
+      <li>Maintain class sizes in line with the capacity structure in Section 3.</li>
+      <li>Supply lesson plans, music, and any specialized props or equipment reasonably required for the Program.</li>
+      <li>Supervise students closely during class hours and manage dismissal per the School's agreed procedures.</li>
+    </ul>
+    <p><b>The School agrees to:</b></p>
+    <ul>
+      <li>Provide a safe, clean, and appropriate facility for the classes.</li>
+      <li>Promote the Program to students and parents through appropriate school communication channels.</li>
+      <li>Provide a designated point of contact for emergencies, building access, and facility management.</li>
+      <li>Provide current emergency contact information for participating students.</li>
+    </ul>
+
+    <h3>5. Fees and Payment Structure</h3>
+    <div class="callout"><b>Preferred model — School-Funded Flat Rate:</b> the School pays the Academy a flat fee directly, guaranteeing payment regardless of the number of enrolled students.</div>
+    <div class="field"><b>Subscription Options:</b> Monthly (every 4 sessions) or Quarterly / Trimester</div>
+    <div class="field"><b>Flat Fee:</b> <span class="placeholder" contenteditable="true" data-default="[AMOUNT]">[AMOUNT]</span> EGP per <span class="placeholder" contenteditable="true" data-default="[monthly / quarterly]">[monthly / quarterly]</span> period, covering <span class="placeholder" contenteditable="true" data-default="[4 / 12]">[4 / 12]</span> sessions</div>
+    <div class="field"><b>Invoicing:</b> Academy invoices the School on the <span class="placeholder" contenteditable="true" data-default="[DAY]">[DAY]</span> of each applicable period, with net <span class="placeholder" contenteditable="true" data-default="[NUMBER]">[NUMBER]</span> payment terms.</div>
+    <p style="font-size:13px; color:#a33; font-style:italic;">Note: individual per-session/per-class payment is not offered, to avoid inconsistency within the class. Direct collection from parents is available only as an alternative arrangement if specifically requested by the School.</p>
+
+    <h3>6. Attendance, Safety, Emergencies & Student Conduct</h3>
+    <ul>
+      <li>The School provides emergency contact information for participating students.</li>
+      <li>The Academy promptly informs the School's designated contact of any accident, injury, or significant incident.</li>
+      <li>The Academy follows the School's emergency and safeguarding procedures while on School premises.</li>
+    </ul>
+    <p><b>Student Behavior:</b> Students are expected to respect instructors, fellow students, and School facilities. The Academy may request a student's removal for repeated disruption or safety risk, following consultation with the School and, where appropriate, the parent/guardian.</p>
+    <p><b>Weather & Closures:</b> If the School closes for weather, holidays, or emergencies, class is canceled and the parties agree on a makeup date where reasonable.</p>
+    <p><b>Minimum Enrollment:</b> The Academy may cancel, postpone, or discontinue a class if the 8-student minimum (Section 3) is not met, with reasonable notice.</p>
+    <p><b>Force Majeure:</b> Neither party is liable for delay or failure caused by circumstances beyond its reasonable control (natural disasters, government restrictions, epidemics, severe weather, etc.).</p>
+
+    <h3>7. Photography & Media</h3>
+    <p>The Academy may photograph or record students for educational, promotional, and social media purposes. Any identifiable image or video used for Academy promotion requires prior written parental consent, collected individually via the Parental Consent Form (Appendix A). The Academy will not knowingly publish a student's full name alongside their image without additional consent.</p>
+
+    <h3>8. Term & Termination</h3>
+    <p>This Agreement remains in effect for the stated term unless terminated earlier. Either party may terminate with or without cause on 30 days' written notice. Prepaid fees for services not yet rendered are refunded pro-rata upon early termination.</p>
+
+    <h3>9. Signatures</h3>
+    <div class="two-col">
+      <div>
+        <p><b>For Premier Ballet Academy</b></p>
+        <div class="sig-line">Signature: <span class="sig-underline"></span></div>
+        <div class="sig-line">Name & Title: <span class="sig-underline"></span></div>
+        <div class="sig-line">Date: <span class="sig-underline"></span></div>
+      </div>
+      <div>
+        <p><b>For <span class="placeholder" contenteditable="true" data-default="[SCHOOL NAME]">[SCHOOL NAME]</span></b></p>
+        <div class="sig-line">Signature: <span class="sig-underline"></span></div>
+        <div class="sig-line">Name & Title: <span class="sig-underline"></span></div>
+        <div class="sig-line">Date: <span class="sig-underline"></span></div>
+      </div>
+    </div>
+
+    <div class="appendix">
+      <h1 style="font-size:18px;">APPENDIX A</h1>
+      <h2 class="subtitle">Parental Consent Form — Photography & Media</h2>
+      <p class="note">One per student — the School may photocopy as needed</p>
+      <p>I, the undersigned parent/legal guardian, consent to Premier Ballet Academy photographing/recording my child during Program activities and using such media for the Academy's educational, promotional, website, and social media purposes.</p>
+      <p><b>☐ I CONSENT &nbsp;&nbsp;&nbsp; ☐ I DO NOT CONSENT</b></p>
+      <div class="sig-line">Student Name: <span class="sig-underline"></span></div>
+      <div class="sig-line">Class / Grade: <span class="sig-underline"></span></div>
+      <div class="sig-line">Parent/Guardian Name: <span class="sig-underline"></span></div>
+      <div class="sig-line">Signature: <span class="sig-underline"></span></div>
+      <div class="sig-line">Date: <span class="sig-underline"></span></div>
+    </div>
+
+  </div>
+
+  <!-- ================= ARABIC ================= -->
+  <div id="content-ar" class="lang-block" dir="rtl">
+
+    <h1>أكاديمية بريمير للباليه</h1>
+    <h2 class="subtitle">برنامج الرقص لما بعد الدوام المدرسي — اتفاقية تقديم خدمة</h2>
+    <p class="note">قالب — يرجى تعديل الحقول المظللة وفقاً لبيانات العميل، ثم التنزيل</p>
+
+    <p>تم إبرام هذه الاتفاقية بتاريخ <span class="placeholder" contenteditable="true" data-default="[اليوم]">[اليوم]</span> من شهر <span class="placeholder" contenteditable="true" data-default="[الشهر]">[الشهر]</span> لعام <span class="placeholder" contenteditable="true" data-default="[السنة]">[السنة]</span>، بين <b>أكاديمية بريمير للباليه</b>، الكائنة في <span class="placeholder" contenteditable="true" data-default="[عنوان الأكاديمية]">[عنوان الأكاديمية]</span>، ويُشار إليها فيما يلي بـ"الأكاديمية"، وبين <span class="placeholder" contenteditable="true" data-default="[اسم المدرسة]">[اسم المدرسة]</span>، الكائنة في <span class="placeholder" contenteditable="true" data-default="[عنوان المدرسة]">[عنوان المدرسة]</span>، ويُشار إليها فيما يلي بـ"المدرسة".</p>
+
+    <h3>1. نطاق الخدمات</h3>
+    <div class="field"><b>أنماط الرقص المقدمة:</b> <span class="placeholder" contenteditable="true" data-default="[مثال: الباليه والرقص المعاصر]">[مثال: الباليه والرقص المعاصر]</span></div>
+    <div class="field"><b>الفئة المستهدفة من الطلاب:</b> <span class="placeholder" contenteditable="true" data-default="[مثال: KG1، KG2، الصف الأول، الصف الثاني — الأعمار 5–7 سنوات]">[مثال: KG1، KG2، الصف الأول، الصف الثاني — الأعمار 5–7 سنوات]</span></div>
+    <div class="field"><b>أهداف البرنامج:</b> تعليم الطلاب أساسيات تقنيات الرقص، وتصميم الرقصات، والعمل الجماعي، واللياقة البدنية، ضمن بيئة آمنة وبنّاءة.</div>
+
+    <h3>2. الجدول الزمني والمواعيد</h3>
+    <div class="field"><b>تاريخ البدء:</b> <span class="placeholder" contenteditable="true" data-default="[تاريخ البدء]">[تاريخ البدء]</span></div>
+    <div class="field"><b>تاريخ الانتهاء:</b> <span class="placeholder" contenteditable="true" data-default="[تاريخ الانتهاء]">[تاريخ الانتهاء]</span></div>
+    <div class="field"><b>الجدول الأسبوعي:</b> <span class="placeholder" contenteditable="true" data-default="[أيام الأسبوع]">[أيام الأسبوع]</span></div>
+    <div class="field"><b>مدة الحصة:</b> <span class="placeholder" contenteditable="true" data-default="[45 دقيقة / ساعة واحدة]">[45 دقيقة / ساعة واحدة]</span>، من الساعة <span class="placeholder" contenteditable="true" data-default="[وقت البدء]">[وقت البدء]</span> إلى <span class="placeholder" contenteditable="true" data-default="[وقت الانتهاء]">[وقت الانتهاء]</span></div>
+
+    <h3>3. سعة الفصل وإدارة المجموعات</h3>
+    <ul>
+      <li>الحد الأدنى للتسجيل في الفصل: <b>8 طلاب</b></li>
+      <li>الحد الأقصى للتسجيل في الفصل: <b>12 طالباً</b></li>
+      <li>في حال تجاوز عدد الطلاب المسجلين 12 طالباً، تقوم الأكاديمية بفتح فصل إضافي، إما (أ) في يوم مختلف من الأسبوع، أو (ب) في نفس اليوم، مباشرة قبل أو بعد الحصة الحالية.</li>
+    </ul>
+
+    <h3>4. الأدوار والمسؤوليات</h3>
+    <p><b>تلتزم الأكاديمية بـ:</b></p>
+    <ul>
+      <li>توفير مدربي رقص مؤهلين تأهيلاً مناسباً وتم فحصهم.</li>
+      <li>الحفاظ على أعداد الفصول وفقاً لهيكل السعة الوارد في البند 3.</li>
+      <li>توفير الخطط الدراسية، والموسيقى، وأي أدوات أو معدات تدريب متخصصة يُعقل أن يحتاجها البرنامج.</li>
+      <li>الإشراف على الطلاب عن كثب أثناء ساعات الحصة وإدارة عملية الانصراف وفقاً للإجراءات المتفق عليها مع المدرسة.</li>
+    </ul>
+    <p><b>تلتزم المدرسة بـ:</b></p>
+    <ul>
+      <li>توفير مرفق آمن ونظيف ومناسب لإقامة الحصص.</li>
+      <li>الترويج للبرنامج لدى الطلاب وأولياء الأمور من خلال قنوات التواصل المدرسية المناسبة.</li>
+      <li>تزويد الأكاديمية بجهة اتصال مخصصة للطوارئ، والدخول إلى المبنى، وإدارة المرافق.</li>
+      <li>تزويد الأكاديمية ببيانات اتصال الطوارئ الحالية للطلاب المشاركين.</li>
+    </ul>
+
+    <h3>5. الرسوم وهيكل الدفع</h3>
+    <div class="callout"><b>النموذج المفضل — السعر الثابت الممول من المدرسة:</b> تدفع المدرسة رسماً ثابتاً للأكاديمية مباشرة، بما يضمن السداد للأكاديمية بغض النظر عن عدد الطلاب المسجلين.</div>
+    <div class="field"><b>خيارات الاشتراك:</b> اشتراك شهري (كل 4 حصص) أو اشتراك ربع سنوي (فصل دراسي)</div>
+    <div class="field"><b>الرسم الثابت:</b> <span class="placeholder" contenteditable="true" data-default="[المبلغ]">[المبلغ]</span> جنيه مصري لكل فترة <span class="placeholder" contenteditable="true" data-default="[شهرية / ربع سنوية]">[شهرية / ربع سنوية]</span>، تغطي <span class="placeholder" contenteditable="true" data-default="[4 / 12]">[4 / 12]</span> حصة</div>
+    <div class="field"><b>الفوترة:</b> تقوم الأكاديمية بفوترة المدرسة في يوم <span class="placeholder" contenteditable="true" data-default="[اليوم]">[اليوم]</span> من كل فترة مستحقة، وبشروط سداد صافي <span class="placeholder" contenteditable="true" data-default="[الرقم]">[الرقم]</span> يوماً.</div>
+    <p style="font-size:13px; color:#a33; font-style:italic;">ملاحظة: لا يُتاح الدفع الفردي لكل حصة/فصل على حدة، تجنباً لعدم الاتساق داخل الفصل. ويظل التحصيل المباشر من أولياء الأمور خياراً بديلاً فقط في حال طلبته المدرسة تحديداً.</p>
+
+    <h3>6. الحضور والسلامة والطوارئ وسلوك الطلاب</h3>
+    <ul>
+      <li>تزود المدرسة الأكاديمية ببيانات اتصال الطوارئ الخاصة بالطلاب المشاركين.</li>
+      <li>تقوم الأكاديمية بإبلاغ جهة الاتصال المحددة لدى المدرسة فوراً بأي حادث أو إصابة أو واقعة هامة.</li>
+      <li>تلتزم الأكاديمية ومدربوها باتباع إجراءات الطوارئ والسلامة الخاصة بالمدرسة أثناء التواجد في مبنى المدرسة.</li>
+    </ul>
+    <p><b>سلوك الطلاب:</b> يُتوقع من الطلاب احترام المدربين وزملائهم ومرافق المدرسة. يجوز للأكاديمية أن تطلب إبعاد طالب عن البرنامج في حال تكرار الإخلال بالنظام أو تشكيله خطراً على السلامة، بعد التشاور مع المدرسة وولي الأمر عند الاقتضاء.</p>
+    <p><b>الطقس والإغلاقات:</b> في حال إغلاق المدرسة بسبب الطقس أو العطلات أو الطوارئ، يتم إلغاء الحصة، ويسعى الطرفان للاتفاق على موعد تعويضي مناسب.</p>
+    <p><b>الحد الأدنى للتسجيل:</b> يحق للأكاديمية إلغاء أو تأجيل أو إيقاف فصل في حال عدم الوصول إلى الحد الأدنى للتسجيل (8 طلاب) الوارد في البند 3، مع إشعار مسبق معقول.</p>
+    <p><b>القوة القاهرة:</b> لا يتحمل أي من الطرفين المسؤولية عن أي تأخير أو إخلال ناتج عن ظروف خارجة عن إرادته المعقولة (كالكوارث الطبيعية، والقيود الحكومية، والأوبئة، والطقس القاسي، وغيرها).</p>
+
+    <h3>7. التصوير والإعلام</h3>
+    <p>يجوز للأكاديمية تصوير الطلاب أو تسجيلهم لأغراض تعليمية وترويجية ولوسائل التواصل الاجتماعي. يتطلب أي استخدام لصورة أو تسجيل يمكن التعرف من خلاله على الطالب لأغراض ترويج الأكاديمية موافقة خطية مسبقة من ولي الأمر، تُجمع بشكل فردي عبر نموذج موافقة ولي الأمر (الملحق أ). ولن تقوم الأكاديمية بنشر الاسم الكامل للطالب مقترناً بصورته دون موافقة إضافية.</p>
+
+    <h3>8. مدة الاتفاقية وإنهاؤها</h3>
+    <p>تظل هذه الاتفاقية سارية للمدة المحددة ما لم يتم إنهاؤها مبكراً. يجوز لأي من الطرفين إنهاء الاتفاقية، بسبب أو دون سبب، بإشعار كتابي مدته 30 يوماً. تُرد الرسوم المدفوعة مسبقاً عن الخدمات غير المقدمة بعد على أساس تناسبي في حال الإنهاء المبكر.</p>
+
+    <h3>9. التوقيعات</h3>
+    <div class="two-col">
+      <div>
+        <p><b>عن أكاديمية بريمير للباليه</b></p>
+        <div class="sig-line">التوقيع: <span class="sig-underline"></span></div>
+        <div class="sig-line">الاسم والمنصب: <span class="sig-underline"></span></div>
+        <div class="sig-line">التاريخ: <span class="sig-underline"></span></div>
+      </div>
+      <div>
+        <p><b>عن <span class="placeholder" contenteditable="true" data-default="[اسم المدرسة]">[اسم المدرسة]</span></b></p>
+        <div class="sig-line">التوقيع: <span class="sig-underline"></span></div>
+        <div class="sig-line">الاسم والمنصب: <span class="sig-underline"></span></div>
+        <div class="sig-line">التاريخ: <span class="sig-underline"></span></div>
+      </div>
+    </div>
+
+    <div class="appendix">
+      <h1 style="font-size:18px;">الملحق أ</h1>
+      <h2 class="subtitle">نموذج موافقة ولي الأمر — التصوير والإعلام</h2>
+      <p class="note">نسخة لكل طالب — يجوز للمدرسة تصويرها حسب الحاجة</p>
+      <p>أنا الموقّع أدناه، ولي أمر الطالب، أوافق على قيام أكاديمية بريمير للباليه بتصوير/تسجيل طفلي أثناء أنشطة البرنامج، واستخدام هذه الصور/التسجيلات لأغراض الأكاديمية التعليمية والترويجية وعبر الموقع الإلكتروني ووسائل التواصل الاجتماعي.</p>
+      <p><b>☐ أوافق &nbsp;&nbsp;&nbsp; ☐ لا أوافق</b></p>
+      <div class="sig-line">اسم الطالب: <span class="sig-underline"></span></div>
+      <div class="sig-line">الصف / الفصل: <span class="sig-underline"></span></div>
+      <div class="sig-line">اسم ولي الأمر: <span class="sig-underline"></span></div>
+      <div class="sig-line">التوقيع: <span class="sig-underline"></span></div>
+      <div class="sig-line">التاريخ: <span class="sig-underline"></span></div>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+  var currentLang = 'en';
+
+  document.querySelectorAll('.placeholder').forEach(function (el) {
+    el.addEventListener('focus', function () {
+      if (this.innerText.trim() === this.dataset.default) this.innerText = '';
+    });
+    el.addEventListener('blur', function () {
+      var text = this.innerText.trim();
+      if (text === '') { this.innerText = this.dataset.default; this.classList.remove('filled'); }
+      else { this.classList.add('filled'); }
+    });
+  });
+
+  function setLang(lang) {
+    currentLang = lang;
+    document.getElementById('content-en').classList.toggle('active', lang === 'en');
+    document.getElementById('content-ar').classList.toggle('active', lang === 'ar');
+    document.getElementById('btnEN').classList.toggle('active', lang === 'en');
+    document.getElementById('btnAR').classList.toggle('active', lang === 'ar');
+    document.getElementById('hintText').innerText = lang === 'en'
+      ? 'Click any highlighted field to edit it, then download.'
+      : 'اضغط على أي حقل مظلل لتعديله، ثم قم بالتنزيل.';
+    document.getElementById('downloadBtn').innerText = lang === 'en' ? '⬇ Download PDF' : '⬇ تنزيل PDF';
+  }
+
+  function downloadPdf() {
+    var btn = document.getElementById('downloadBtn');
+    btn.disabled = true;
+    btn.innerText = currentLang === 'en' ? 'Preparing PDF…' : 'جارٍ التجهيز…';
+
+    var element = document.getElementById(currentLang === 'en' ? 'content-en' : 'content-ar');
+
+    var opt = {
+      margin:       [10, 10, 10, 10],
+      filename:     currentLang === 'en'
+                      ? 'Premier_Ballet_Academy_Service_Agreement_EN.pdf'
+                      : 'Premier_Ballet_Academy_Service_Agreement_AR.pdf',
+      image:        { type: 'jpeg', quality: 0.98 },
+      html2canvas:  {
+        scale: 2,
+        useCORS: true,
+        onclone: function (clonedDoc) {
+          clonedDoc.querySelectorAll('.placeholder').forEach(function (el) {
+            el.style.background = 'transparent';
+            el.style.border = 'none';
+            el.style.padding = '0';
+          });
+          var activeEl = clonedDoc.getElementById(currentLang === 'en' ? 'content-en' : 'content-ar');
+          if (activeEl) activeEl.style.display = 'block';
+        }
+      },
+      jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' },
+      pagebreak:    { mode: ['avoid-all', 'css', 'legacy'] }
+    };
+
+    html2pdf().set(opt).from(element).save().then(function () {
+      btn.disabled = false;
+      btn.innerText = currentLang === 'en' ? '⬇ Download PDF' : '⬇ تنزيل PDF';
+    });
+  }
+</script>
+
+</body>
+</html>
